@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use ArticleRepositoryInterface;
+use App\Repositories\Contract\ArticleRepositoryInterface;
 use Illuminate\Http\Request;
 
 class ArticleController extends Controller
@@ -16,6 +16,8 @@ class ArticleController extends Controller
 
     public function index()
     {
-        return response()->json($this->articleRepository->all());
+        $data = $this->articleRepository->all();
+        return response()->json($data);
+        return view('dashboard', compact('data'));
     }
 }

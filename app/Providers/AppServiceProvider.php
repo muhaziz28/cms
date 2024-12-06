@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
-use ArticleRepository;
-use ArticleRepositoryInterface;
+use App\Repositories\Contract\ArticleRepositoryInterface;
+use App\Repositories\Eloquent\ArticleRepository;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider

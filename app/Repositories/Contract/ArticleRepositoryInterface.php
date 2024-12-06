@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Repositories\Contract;
+
 interface ArticleRepositoryInterface
 {
     public function all();

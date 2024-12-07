@@ -16,6 +16,10 @@ Route::middleware('auth')->group(function () {
 
     Route::controller(ArticleController::class)->group(function () {
         Route::get("/dashboard", "index")->name("dashboard");
+        Route::get("/article/{id}", "edit")->name("article.edit");
+        Route::put("/article/{id}", "update")->name("article.update");
+        Route::get("/article", "add")->name("article.add");
+        Route::post("/article", "store")->name("article.store");
     });
 });
 

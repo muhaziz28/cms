@@ -7,8 +7,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class ArticleCategory extends Model
 {
-    use SoftDeletes;
-
     protected $fillable = [
         "article_id",
         "category_id",
@@ -17,5 +15,10 @@ class ArticleCategory extends Model
     public function category()
     {
         return $this->belongsTo(Category::class);
+    }
+
+    public function article()
+    {
+        return $this->belongsTo(Article::class);
     }
 }

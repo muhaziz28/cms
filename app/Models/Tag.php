@@ -10,4 +10,9 @@ class Tag extends Model
     use SoftDeletes;
 
     protected $fillable = ["name"];
+
+    public function articles()
+    {
+        return $this->belongsToMany(Article::class, 'article_tags', 'tag_id', 'article_id');
+    }
 }

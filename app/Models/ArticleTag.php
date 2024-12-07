@@ -7,8 +7,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class ArticleTag extends Model
 {
-    use SoftDeletes;
-
     protected $fillable = [
         "article_id",
         "tag_id"
